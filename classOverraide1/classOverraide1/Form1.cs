@@ -26,8 +26,7 @@ namespace classOverraide1
         // 플레이어의 직업과 몬스터 종류를 구분하기위해 또 다른 클래스 생성 후 상속
 
 
-        //클래스 생성 직업 선택 로직
-        // 전사 법사
+        
 
 
         public class Character
