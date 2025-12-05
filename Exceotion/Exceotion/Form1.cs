@@ -18,19 +18,19 @@ namespace Exceotion
                 {
                     throw new Exception("닉네임을 입력하거나 2글자 이상, admin은 포함 시킬 수 없습니다.");
                 }
+                else
+                {
+                    textResult.Text += textInput.Text + "\r\n";
+                    textInput.Clear();
+                    textInput.Focus();
+                    MessageBox.Show("닉네임 등록 완료!");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            finally
-            {
-                // 예외 발생 여부와 상관없이 항상 실행
-                textResult.Text += textInput.Text + "\r\n";
-                textInput.Clear();
+                MessageBox.Show(ex.Message);
+                textInput.Clear(); // 예외 발생 시 텍스트박스 내용 지우기
                 textInput.Focus();
-                
             }
         }
     }
